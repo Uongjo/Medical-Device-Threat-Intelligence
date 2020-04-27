@@ -12,7 +12,9 @@ class App extends Component {
     return (
       <div id="app">
         <NavBar/>
-        <Dashboard/>        
+        <div id="main-container">
+          <Dashboard/>        
+        </div>
       </div>
     );
   }

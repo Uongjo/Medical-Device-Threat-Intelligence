@@ -6,9 +6,9 @@
 
   color: white;
   background-color: $secondary-color;
-  width: 90px;
+  width: $nav-bar-width;
   height: 100vh;
-  position: relative;
+  position: fixed;
   display: block;
   font-family: $body-font;
   float: left;

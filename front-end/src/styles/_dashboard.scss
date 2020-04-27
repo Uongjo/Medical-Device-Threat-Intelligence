@@ -1,10 +1,57 @@
 #dashboard {
   display: inline-block;
+  width: 100%;
 
-  h1 {
+  .title {
     color: dodgerblue;
     font-weight: lighter;
     margin: 10px;
-    margin-left: 20px;
   }
+
+  .device-number-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+    
+    .device-number {
+      background-color: black;
+      margin: 20px;
+      min-width: 300px;
+      text-align: center;
+      padding: 30px;
+      padding-top: 20px;
+      box-shadow: 2px 2px 10px grey;
+      border-radius: 3px;
+
+      h1 {
+        font-size: 90px;
+        font-weight: lighter;
+        color: white;
+
+      }
+
+      h2 {
+        font-size: 20px;
+        font-weight: lighter;
+        color: white;
+      }
+
+    }
+
+    .device-number:nth-child(1) {
+      background-color: $primary-color;
+    }
+
+    .device-number:nth-child(2) {
+      background-color: $warning-yellow;
+    }
+
+    .device-number:nth-child(3) {
+      background-color: $danger-red;
+    }
+
+  }
+
 }

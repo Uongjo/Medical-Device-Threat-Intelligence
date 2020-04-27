@@ -1,33 +1,48 @@
 import React, { Component } from 'react';
+import CountUp from 'react-countup';
 
 class Dashboard extends Component {
   
   constructor(props) {
     super(props)
     this.state = {
-      totalInventory: 700,
-      animateTotal: 0
+
     }
   }
 
-  componentDidMount() {
-    this.updateCount()
-  }
+  renderNumbers = () => {
+    let numbers = [
+      {title: "Total Devices", end: 1124},
+      {title: "Recalled Devices", end: 72},
+      {title: "Vulnerable Devices", end: 14},
+    ]
 
-  updateCount = () => {
-    if(this.state.animateTotal < this.state.totalInventory) {
-      var animateTotal = this.state.animateTotal + 5
-      setInterval(this.updateCount, 1)
-      console.log("Here")
-      this.setState({ animateTotal })
-    }
+    numbers = numbers.map(item =>
+      <div className="device-number">
+        <h1>
+          <CountUp
+            start={0}
+            end={item.end}
+            duration={3}
+            delay={1}
+          />
+        </h1>
+        <h2>{item.title}</h2>
+      </div>
+    )
+
+    return (
+      <div className="device-number-container">
+        {numbers}
+      </div>
+    )
   }
 
   render() { 
     return (
       <div id="dashboard">
-        <h1>MEDICAL DEVICE THREAT INTELLIGENCE</h1>
-        <h1>{this.state.animateTotal}</h1>
+        <h1 className="title">MEDICAL DEVICE THREAT INTELLIGENCE</h1>
+        {this.renderNumbers()}
       </div>
     );
   }

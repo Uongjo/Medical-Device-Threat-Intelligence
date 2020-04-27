@@ -5,9 +5,9 @@ class NavBar extends Component {
   state = {  }
 
   renderTabs() {
-    var titles = ['Dashboard', 'Inventory', 'Profile', 'Settings']
-    var icons = ["far fa-chart-bar", "fas fa-hospital", "fas fa-user", "fas fa-cog"]
-    var tabs = []
+    const titles = ['Dashboard', 'Inventory', 'Profile', 'Settings']
+    const icons = ["far fa-chart-bar", "fas fa-hospital", "fas fa-user", "fas fa-cog"]
+    const tabs = []
     titles.forEach( (item, index) => {
       tabs.push(
         <div className="nav-tab">

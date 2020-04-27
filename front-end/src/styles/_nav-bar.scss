@@ -34,7 +34,30 @@
   }
 
   .nav-tab {
-    margin: 20px 0px;
+    padding: 20px 0px;
+    height: 60px;
+    transition: .5s ease-in-out;
+    position: relative;
+
+    &:after {
+      content: '';
+      display: block;
+      border-bottom: 4px solid $primary-color;
+      width: 0;
+      position: absolute;
+      left: 0;
+      -webkit-transition: 1s ease;
+      transition: .75s ease;
+      margin-top: 15px;
+    }
+
+    &:hover {
+      background-color: $tertiary-color;
+      
+      &:after {
+        width: 100%;
+      }
+    }
   }
-  
+
 }

@@ -20,7 +20,10 @@ class App extends Component {
           <Inventory/>
         </Route>
         <Route path="*">
-          <h1>Error 404. Page does not exist.</h1>
+          <div id="error-page">
+            <h1>Error 404</h1>
+            <h1>The page you are looking for not exist.</h1>
+          </div>
         </Route>
       </Switch>
     )

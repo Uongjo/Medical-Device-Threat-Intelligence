@@ -47,7 +47,7 @@
     &:after {
       content: '';
       display: block;
-      border-bottom: 4px solid $primary-color;
+      border-bottom: 4px solid $tertiary-color;
       width: 0;
       position: absolute;
       left: 0;
@@ -57,7 +57,7 @@
     }
 
     &:hover {
-      background-color: $tertiary-color;
+      background-color: $primary-color;
       
       &:after {
         width: 100%;

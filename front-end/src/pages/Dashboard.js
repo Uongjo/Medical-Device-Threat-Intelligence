@@ -12,9 +12,9 @@ class Dashboard extends Component {
 
   renderNumbers = () => {
     let numbers = [
-      {title: "Total Devices", end: 1124},
-      {title: "Recalled Devices", end: 72},
-      {title: "Vulnerable Devices", end: 14},
+      {title: "TOTAL DEVICES", end: 1124},
+      {title: "RECALLED DEVICES", end: 72},
+      {title: "VULNERABLE DEVICES", end: 14},
     ]
 
     numbers = numbers.map(item =>
@@ -23,7 +23,7 @@ class Dashboard extends Component {
           <CountUp
             start={0}
             end={item.end}
-            duration={3}
+            duration={1}
             delay={1}
           />
         </h1>

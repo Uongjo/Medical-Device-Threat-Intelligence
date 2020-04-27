@@ -5,16 +5,36 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import './styles/main.scss';
 import NavBar from './components/NavBar'
 import Dashboard from './pages/Dashboard';
+import Inventory from './pages/Inventory'
 
 class App extends Component {
   state = {  }
+
+  getRoutes = () => {
+    return(
+      <Switch>
+        <Route exact path="/">
+          <Dashboard/>
+        </Route>
+        <Route exact path="/inventory">
+          <Inventory/>
+        </Route>
+        <Route path="*">
+          <h1>Error 404. Page does not exist.</h1>
+        </Route>
+      </Switch>
+    )
+  }
+
   render() { 
     return (
       <div id="app">
-        <NavBar/>
-        <div id="main-container">
-          <Dashboard/>        
-        </div>
+        <Router>
+          <NavBar/>
+          <div id="main-container">
+            {this.getRoutes()}
+          </div>
+        </Router>
       </div>
     );
   }

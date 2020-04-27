@@ -1,22 +1,27 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import Logo from '../images/logo.png'
 
 class NavBar extends Component {
   state = {  }
 
   renderTabs() {
-    const titles = ['Dashboard', 'Inventory', 'Profile', 'Settings']
-    const icons = ["far fa-chart-bar", "fas fa-hospital", "fas fa-user", "fas fa-cog"]
-    const tabs = []
-    titles.forEach( (item, index) => {
-      tabs.push(
+    
+    const tabs = [
+      {title: 'Dashboard', icon: "far fa-chart-bar", path: '/'},
+      {title: 'Inventory', icon: "fas fa-hospital", path: '/inventory'},
+      {title: 'Profile', icon: "fas fa-user", path: '/profile'},
+      {title: 'Settings', icon: "fas fa-cog", path: '/settings'},
+    ]
+
+    return tabs.map((item, index) => (
+      <Link key={index} to={item.path}>
         <div className="nav-tab">
-          <i className={icons[index]}/>
-          <p>{item}</p>
+          <i className={item.icon}/>
+          <p>{item.title}</p>
         </div>
-      )
-    })
-    return tabs
+      </Link>
+    ))
   }
 
   render() { 

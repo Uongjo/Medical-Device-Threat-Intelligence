@@ -13,6 +13,11 @@
   font-family: $body-font;
   float: left;
 
+  a {
+    color:inherit;
+    text-decoration: none;
+  }
+
   p, i {
     text-align: center;
     width: 100%;

@@ -1,0 +1,40 @@
+#nav-bar {
+
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+
+  color: white;
+  background-color: $secondary-color;
+  width: 90px;
+  height: 100vh;
+  position: relative;
+  display: block;
+  font-family: $body-font;
+  float: left;
+
+  p, i {
+    text-align: center;
+    width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  i {
+    font-size: 35px;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    width: 70px;
+    display: block;
+    margin: 10px auto;
+  }
+
+  .nav-tab {
+    margin: 20px 0px;
+  }
+  
+}

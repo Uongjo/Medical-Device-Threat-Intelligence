@@ -22,7 +22,7 @@ class App extends Component {
         <Route path="*">
           <div id="error-page">
             <h1>Error 404</h1>
-            <h1>The page you are looking for not exist.</h1>
+            <h1>The page you are looking for does not exist.</h1>
           </div>
         </Route>
       </Switch>

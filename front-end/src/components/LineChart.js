@@ -59,25 +59,27 @@ class LineChart extends Component {
 
   render() { 
     return (
-      <div id="line-chart">
-        <Line
-          data={this.state.chartData}
-          options={{
-            responsive: true,
-            animation: {
-              duration: 3000
-            },
-            scales: {
-              yAxes: [
-                {
-                  ticks: {
-                    beginAtZero: true,
+      <div id="line-chart-container">
+        <div className="line-chart">
+          <Line
+            data={this.state.chartData}
+            options={{
+              responsive: true,
+              animation: {
+                duration: 3000
+              },
+              scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      beginAtZero: true,
+                    }
                   }
-                }
-              ]
-            }
-          }}
-        />
+                ]
+              }
+            }}
+          />
+        </div>
       </div>
     );
   }

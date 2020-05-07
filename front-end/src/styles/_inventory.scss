@@ -1,0 +1,88 @@
+#inventory {
+  height: 100%;
+
+  .form {
+
+    display: flex;
+    justify-content: center;
+
+    .search {
+      margin: 30px;
+      padding: 15px;
+      font-family: $body-font;
+      width: 750px;
+      border-radius: 10px;
+      font-size: 20px;
+      border-style: solid;
+      border-color: $primary-color;
+      color: $primary-color;
+
+      &:focus {
+        outline: none;
+      }
+      
+      &::placeholder {
+        color: #BBBBBB;
+      }
+    }
+  }
+
+  .inventory-section-container {
+    height: 550px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+
+    h1 {
+      text-align: center;
+      font-weight: lighter;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .inventory-section {
+      font-family: $body-font;
+      width: 400px;
+      height: 100%;
+      display: block;
+      margin: 0px 10px;
+      overflow-y: auto;
+      border-radius: 5px;
+      transition: .5s ease-in-out;
+
+      .inventory-item {
+        background-color: white;
+        transition: .5s ease-in-out;
+        margin: 20px;
+        padding: 20px;
+        height: 95px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 10px #BBBBBB;
+      }
+    }
+    
+    .outer-inventory-section:nth-child(1) {
+      .inventory-section {
+        background-color: $primary-color;
+      }
+    }
+
+    .outer-inventory-section:nth-child(2) {
+      .inventory-section {
+        background-color: $warning-yellow;
+      }
+    }
+
+    .outer-inventory-section:nth-child(3) {
+      .inventory-section {
+        background-color: $danger-red;
+      }
+    }
+  }
+  
+}

@@ -1,4 +1,11 @@
-#line-chart {
-  height: 750px;
-  width: 1000px;
+#line-chart-container {
+  margin: 20px auto;
+  width: fit-content;
+  height: fit-content;
+  // border: 1px solid gray;
+
+  .line-chart {
+    height: 400px;
+    width: 800px;
+  }
 }

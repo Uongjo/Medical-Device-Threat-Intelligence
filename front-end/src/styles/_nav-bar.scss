@@ -44,6 +44,10 @@
     transition: .5s ease-in-out;
     position: relative;
 
+    i, p {
+      transition: .3s ease-in-out;
+    }
+
     &:after {
       content: '';
       display: block;
@@ -59,6 +63,14 @@
     &:hover {
       background-color: $primary-color;
       
+      i, p {
+        margin-top: -3px;
+      }
+
+      p {
+        margin-bottom: 6px;
+      }
+
       &:after {
         width: 100%;
       }

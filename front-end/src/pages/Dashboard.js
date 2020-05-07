@@ -7,7 +7,7 @@ class Dashboard extends Component {
   constructor(props) {
     super(props)
     this.state = {
-
+      
     }
   }
 
@@ -24,7 +24,7 @@ class Dashboard extends Component {
           <CountUp
             start={0}
             end={item.end}
-            duration={1}
+            duration={1.5}
             delay={1}
           />
         </h1>

@@ -9,3 +9,15 @@
     width: 800px;
   }
 }
+
+#pie-chart-container {
+  margin: 20px auto;
+  width: fit-content;
+  height: fit-content;
+  // border: 1px solid gray;
+
+  .pie-chart {
+    height: 400px;
+    width: 800px;
+  }
+}

@@ -13,7 +13,6 @@ class Inventory extends Component {
       recalledDevices: this.filterDevices(true, false),
       vulnerableDevices: this.filterDevices(false, true),
     }
-    console.log(this.state)
   }
 
   filterDevices = (isUpdate, isVulnerable) => {

@@ -45,8 +45,10 @@ class Dashboard extends Component {
       <div id="dashboard">
         <h1 className="title">MEDICAL DEVICE THREAT INTELLIGENCE</h1>
         {this.renderNumbers()}
-        <LineChart/>
-        <PieChart/>
+        <div className="chart-container">
+          <LineChart/>
+          <PieChart/>
+        </div>
       </div>
     );
   }

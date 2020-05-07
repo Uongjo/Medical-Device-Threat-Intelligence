@@ -16,19 +16,21 @@ class InventorySection extends Component {
     const id = e.dataTransfer.getData('id')
     console.log("DROPPED", id)
     const item = document.getElementById(id)
+    console.log(item.firstChild.innerHTML)
+    
     item.style.display = 'block'
-
     e.target.appendChild(item)
-  }
+    e.target.removeChild(item)
 
-  dragStart = e => {
-    const target = e.target
-    e.dataTransfer.setData('id', target.id)
-    console.log("DRAGGING", target.id)
-
-    setTimeout(() => {
-      target.style.display = "none";
-    }, 0)
+    const devices = this.state.devices
+    devices.push({
+      id: 100,
+      version: '0.1.51',
+      name: item.firstChild.innerHTML,
+      update: false,
+      vulnerable: false,
+    })
+    this.setState({ devices })
   }
 
   dragOver = e => {

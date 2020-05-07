@@ -25,23 +25,23 @@ const state = {
 export default class App extends React.Component {
   render() {
     return (
-      <div>
-      
-
-        <Doughnut
-          data={state}
-          options={{
-            title:{
-              display:false,
-              text:'Devices',
-              fontSize:20
-            },
-            legend:{
-              display:true,
-              position:'top'
-            }
-          }}
-        />
+      <div id="pie-chart-container">
+        <div className="pie-chart">
+          <Doughnut
+            data={state}
+            options={{
+              title:{
+                display:false,
+                text:'Devices',
+                fontSize:20
+              },
+              legend:{
+                display:true,
+                position:'top'
+              }
+            }}
+          />
+        </div>
       </div>
     );
   }

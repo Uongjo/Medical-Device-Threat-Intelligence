@@ -32,7 +32,7 @@ export default class App extends React.Component {
           data={state}
           options={{
             title:{
-              display:true,
+              display:false,
               text:'Devices',
               fontSize:20
             },

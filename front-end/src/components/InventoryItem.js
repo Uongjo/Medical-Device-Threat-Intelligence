@@ -20,9 +20,9 @@ class InventoryItem extends Component {
     return (
       <div className="inventory-item"
         id={"inventory-item-" + this.props.id}
-        draggable={true}
-        onDragStart={this.dragStart}
-        onDragOver={this.dragOver}
+        // draggable={true}
+        // onDragStart={this.dragStart}
+        // onDragOver={this.dragOver}
       >
         <b>{this.props.name}</b>
         <br/>

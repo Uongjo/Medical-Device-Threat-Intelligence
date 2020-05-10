@@ -51,8 +51,8 @@ class InventorySection extends Component {
       <div className="outer-inventory-section">
         <h1>{this.props.title}</h1>
         <div className="inventory-section" 
-          onDrop={event => this.drop(event)} 
-          onDragOver={this.dragOver}
+          // onDrop={event => this.drop(event)} 
+          // onDragOver={this.dragOver}
           >
           {this.renderItems()}
         </div>

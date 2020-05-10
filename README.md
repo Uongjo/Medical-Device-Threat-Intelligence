@@ -1,6 +1,6 @@
 # Medical-Device-Threat-Intelligence
 
-[http://mdti.io/](http://mdti.io/)
+Our proposed product is an asset inventory management software that works to check available databases for security vulnerabilities, as well as any potential recalls. Our software monitors the CVE database (common vulnerabilities and exposures database) as well as the Food and Drug Administration’s database of biomedical / medical device recalls. If a vulnerability or a recall were to exist for a device that the healthcare professionals have in their asset list, they would be promptly notified with a description of the problem. We believe software like this could make a big difference to the lives of those relying on medical devices.
 
 ## Running the Application
 
@@ -40,4 +40,4 @@ Note: If server does not run because of node sass, install the dependency with
 npm i node-sass
 ```
 
-then reboot the server
+then start the server with step 3
